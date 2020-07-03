@@ -1,0 +1,26 @@
+{
+  "orgName": "URL generator",
+  "edition": "Developer",
+  "adminEmail": "singh.manjit@outlook.in",
+  "country": "IN",
+  "hasSampleData": true,
+  "language": "en",
+  "username": "ms@urlgenerator.com",
+  "description": "Generate URL's",
+  "features": [],
+  "settings": {
+    "orgPreferenceSettings": {
+    },
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "securitySettings": {
+      "passwordPolicies": {
+        "enableSetPasswordInApi": true
+      }
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    }
+  }
+}

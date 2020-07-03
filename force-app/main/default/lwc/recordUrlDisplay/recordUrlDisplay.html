@@ -1,0 +1,38 @@
+<!-- Record Image URL's -->
+<template>
+    <template if:true={loading}>
+        <lightning-spinner alternative-text="loading..." title="loading..."
+                           variant="brand">
+        </lightning-spinner>
+    </template>
+    <lightning-card title={title}>
+        <lightning-combobox label="Size" onchange={handleSizeChange} options={sizeValues}
+                            slot="actions" value={selectedSize}>
+        </lightning-combobox>
+        <p class="slds-p-around_medium">
+            <template for:each={urlsForSelectedSize} for:index="index" for:item="item">
+                <article class="slds-tile slds-p-horizontal_medium slds-box" key={item.id}>
+                    <h3 class="slds-tile__title slds-truncate" title="Salesforce UX">
+                        <a href={item.url}>{item.name}</a>
+                    </h3>
+                    <div class="slds-tile__detail">
+                        <dl class="slds-list_horizontal slds-wrap">
+                            <dt class="slds-item_label slds-text-color_weak slds-truncate">
+                                {string_url}
+                            </dt>
+                            <dd class="slds-item_detail slds-truncate">
+                                {item.url}
+                            </dd>
+                            <dt class="slds-item_label slds-text-color_weak slds-truncate">
+                                {string_type}
+                            </dt>
+                            <dd class="slds-item_detail slds-truncate">
+                                {item.fileType}
+                            </dd>
+                        </dl>
+                    </div>
+                </article>
+            </template>
+        </p>
+    </lightning-card>
+</template>

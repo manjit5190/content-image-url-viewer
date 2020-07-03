@@ -1,0 +1,17 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true,
+      "package": "Content Image URL viewer",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT"
+    }
+  ],
+  "namespace": "gmsd",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "48.0",
+  "packageAliases": {
+    "Content Image URL viewer": "0Ho2x0000008P0QCAU"
+  }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <description>Display the url's for content images attached to a record</description>
+    <isExposed>true</isExposed>
+    <masterLabel>Record Image URL's</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="communityName" type="String" label="Community Name"
+                      description="If you want to see a URL specific for a community then add the community name here"
+                      default="" required="false"/>
+            <property name="types" type="String" label="Image types" required="false"
+                      default="jpg,png,jpeg,bmp"
+                      description="Comma separated list of image Type for which to get a URL"/>
+            <property name="title" type="String" label="Title" required="true"
+                      default="Image URL's"
+                      description="Title of the component"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
