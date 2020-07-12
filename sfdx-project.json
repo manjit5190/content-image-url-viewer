@@ -12,6 +12,8 @@
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "48.0",
   "packageAliases": {
-    "Content Image URL viewer": "0Ho2x0000008P0QCAU"
+    "Content Image URL viewer": "0Ho2x0000008P0QCAU",
+    "Content Image URL viewer@0.1.0-2": "04t2x000003iiTiAAI",
+    "Content Image URL viewer@0.1.0-4": "04t2x000003iiTsAAI"
   }
 }

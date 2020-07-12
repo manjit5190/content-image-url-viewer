@@ -1,19 +1,15 @@
 import { LightningElement, wire, api } from "lwc";
 import getUrls from "@salesforce/apex/RecordUrlDisplay.getUrls";
 import ug_Render_URL from "@salesforce/label/c.ug_Render_URL";
-import ug_Image_Type_String from "@salesforce/label/c.ug_Image_Type_String";
-import ug_Image_URL_String from "@salesforce/label/c.ug_Image_URL_String";
 
 export default class recordUrlDisplay extends LightningElement {
 	
-	@api recordId;
+	@api recordId = "001N000001vzLWx";
 	@api communityName;
-	@api types;
-	@api title;
+	@api types = "jpg,png,bmp";
+	@api title = "Images";
 	
 	imageTypes;
-	string_type = ug_Image_Type_String;
-	string_url = ug_Image_URL_String;
 	loading;
 	SIZE = [
 		{
