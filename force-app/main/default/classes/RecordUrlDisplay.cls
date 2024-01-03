@@ -29,8 +29,8 @@ public with sharing class RecordUrlDisplay {
                     FROM ContentDocument
                     WHERE Id IN:contentDocumentIds
             ];
-        } catch (QueryException qe) {
-            throw new AuraHandledException('');
+        } catch (Exception qe) {
+            throw new AuraHandledException(System.Label.ug_Error + qe.getMessage());
         }
     }
 }

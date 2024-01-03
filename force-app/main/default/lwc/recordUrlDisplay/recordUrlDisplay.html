@@ -9,27 +9,20 @@
         <lightning-combobox label="Size" onchange={handleSizeChange} options={sizeValues}
                             slot="actions" value={selectedSize}>
         </lightning-combobox>
-        <p class="slds-p-around_medium">
+        <p class="slds-p-around_medium" style="max-width: 400px">
             <template for:each={urlsForSelectedSize} for:index="index" for:item="item">
-                <article class="slds-tile slds-p-horizontal_medium slds-box" key={item.id}>
-                    <h3 class="slds-tile__title slds-truncate" title="Salesforce UX">
-                        <a href={item.url}>{item.name}</a>
-                    </h3>
-                    <div class="slds-tile__detail">
-                        <dl class="slds-list_horizontal slds-wrap">
-                            <dt class="slds-item_label slds-text-color_weak slds-truncate">
-                                {string_url}
-                            </dt>
-                            <dd class="slds-item_detail slds-truncate">
-                                {item.url}
-                            </dd>
-                            <dt class="slds-item_label slds-text-color_weak slds-truncate">
-                                {string_type}
-                            </dt>
-                            <dd class="slds-item_detail slds-truncate">
-                                {item.fileType}
-                            </dd>
-                        </dl>
+                <article class="slds-p-horizontal_medium slds-box" key={item.id}>
+                    <div class="slds-summary-detail slds-is-open">
+                        <div>
+                            <div class="slds-summary-detail__title">
+                                <h4 class="slds-truncate">
+                                    <strong>{item.name} ({item.fileType})</strong>
+                                </h4>
+                            </div>
+                            <div class="slds-summary-detail__content">
+                                <div>{item.url}</div>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </template>
